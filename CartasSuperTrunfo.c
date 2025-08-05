@@ -5,7 +5,7 @@ int main() {
 char estado1[25];
 char codigo[50];
 char cidade[50];
-int populaçao;
+int populacao;
 float area;
 float pib;
 int turisticos;
@@ -23,7 +23,7 @@ printf("digite a cidade:\n");
 scanf("%s", cidade);
 
 printf("digite a populaçao:\n");
-scanf("%d", &populaçao);
+scanf("%d", &populacao);
 
 printf("digite area:\n");
 scanf("%f", &area);
@@ -34,17 +34,17 @@ scanf("%f", &pib);
 printf("digite o numeros de pontos turisticos\n");
 scanf("%d", &turisticos);
 
-dp = populaçao / area;
-pc = pib / populaçao;
+dp = populacao / area;
+pc = (pib * 1000000000.0f) / populacao;
 
 printf("carta 1:\n");
 printf("cidade: %s\n", cidade);
 printf("estado: %s\n", estado1);
 printf("codigo da carta: %s\n ", codigo);
-printf("populaçao: %d\n area: %.5f\n", populaçao, area);
-printf("pib: %.5f\n pontos turisticos: %d\n", pib, turisticos);
-printf("dencidade populacional: %.5f\n", dp);
-printf("pib per capita: %.5f\n", pc);
+printf("populacao: %d\n area por km²: %.2f\n", populacao, area);
+printf("pib: %.2f\n pontos turisticos: %d\n", pib, turisticos);
+printf("densidade populacional: %.2f\n", dp);
+printf("pib per capita: %.2f\n", pc);
 
 
 
@@ -52,7 +52,7 @@ printf("pib per capita: %.5f\n", pc);
 char estado2[25];
 char codigo2[50];
 char cidade2[50];
-int populaçao2;
+int populacao2;
 float area2;
 float pib2;
 int turisticos2;
@@ -71,7 +71,7 @@ printf("digite a cidade da carta2:\n");
 scanf("%s", cidade2);
 
 printf("digite a populaçao da carta2:\n");
-scanf("%d", &populaçao2);
+scanf("%d", &populacao2);
 
 printf("digite area da carta2:\n");
 scanf("%f", &area2);
@@ -82,8 +82,8 @@ scanf("%f", &pib2);
 printf("digite o numeros de pontos turisticos da carta2:\n");
 scanf("%d", &turisticos2);
 
-dp2 = populaçao2 / area2;
-pc2 = pib2 / populaçao2;
+dp2 = populacao2 / area2;
+pc2 = (pib2 * 1000000000.0f) / populacao2;
 
 
 
@@ -92,10 +92,10 @@ printf("carta 2:\n");
 printf("cidade da cartaa2: %s\n", cidade2);
 printf("estado da carta2: %s\n", estado2);
 printf("codigo da carta2: %s\n ", codigo2);
-printf("populaçao da carta2: %d\n area carta2: %.5f\n", populaçao2, area2);
-printf("pib da carta2: %.5f\n pontos turisticos da carta2: %d\n", pib2, turisticos2);
-printf("dencidade populacional carta2: %.5f\n", dp2);
-printf("pib per capita carta2: %.5f\n", pc2);
+printf("populaçao da carta2: %d\n area em km² carta2: %.2f\n", populacao2, area2);
+printf("pib da carta2: %.2f\n pontos turisticos da carta2: %d\n", pib2, turisticos2);
+printf("densidade populacional carta2: %.2f\n", dp2);
+printf("pib per capita carta2: %.2f\n", pc2);
 
 return 0;
 
